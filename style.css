@@ -1,0 +1,44 @@
+body{
+    background-color: #07222a;
+    margin:0;
+    padding:0;
+    font-family: "hack","fira code","Helvetica","Segoe UI Light","sans-serif";
+}
+#container{
+    display: flex;
+    flex-direction: column;
+}
+#ppp-logo{
+    margin:auto;
+    max-width: 100%;;
+}
+#menu{
+    display: flex;
+    background-color: rgba(36, 41, 46,.7);
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    transition:all .15s ease-out;
+    position: fixed;
+    top:0;
+}
+#menu:hover{ 
+    background-color: rgb(36, 41, 46);
+}
+#menu .menu-item a{
+    transition: all .2s ease-in-out;
+    font-size: 30px;
+    color: #f1f1f1;
+    filter: invert(0);
+    text-decoration:none;
+    padding:0 10px;
+    display: inline-flex;
+}
+#menu .menu-item a svg:hover{
+    filter: invert(1);
+    margin-top: 5px;
+}
+#menu .menu-item a svg{
+filter: invert(.8);    
+}
