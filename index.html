@@ -24,16 +24,17 @@
         <div id="signup">   
           <h1>Sign up and create your Viking today!</h1>
           
-          <form action="/action_page.php" method="get">
-          <div class="field-wrap">
-            <label>Email Address<span class="req">*</span></label>
-            <input type="email"required autocomplete="off"/>
-          </div>
-          <div class="field-wrap">
-            <label>User Name<span class="req">*</span></label>
-            <input type="text" required autocomplete="off"/>
-          </div>
-          <button type="submit" class="button button-block"/>Create Viking!</button>
+          <form onsubmit="submitForm(event)" action="#submitted">
+            <div class="field-wrap">
+              <label>Email Address<span class="req">*</span></label>
+              <input type="email"  name="emailValue" required autocomplete="off"/>
+            </div>
+
+            <div class="field-wrap">
+              <label>User Name<span class="req">*</span></label>
+              <input type="text" name="userNameValue"  required autocomplete="off"/>
+            </div>
+            <button id="vikingSubmitButton" type="submit" class="button button-block"/>Create Viking!</button>
           </form>
         </div>
 
