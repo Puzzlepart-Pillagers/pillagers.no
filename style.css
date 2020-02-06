@@ -187,7 +187,19 @@ textarea {
 #ppp-logo {
     margin: auto;
     max-width: 100%;
-    ;
+    -webkit-transition: .3s ease-in-out;
+	  transition: .3s ease-in-out;
+}
+
+#ppp-logo:hover {
+  opacity: .5;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+#pillagerImg {
+    margin: auto;
+    max-width: 500px;
 }
 
 #menu {

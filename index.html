@@ -13,14 +13,25 @@
 
   <body>
     <div id="container">
-    <img src="/pillagers_alt.jpg" id="ppp-logo">
+    <div id="pillagerImg">
+      <a href="http://pillagers.no/"><img src="/pillagers_alt.jpg" id="ppp-logo"></a>
+    </div>
     <div class="form">
       <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
+        <li class="tab active"><a href="#login">Log In</a></li>
+        <li class="tab"><a href="#signup">Sign Up</a></li>
       </ul>
       
       <div class="tab-content">
+        <div id="login">
+          <h1>Welcome!</h1>
+          <form action="https://pzl.sharepoint.com/sites/pillagers">
+            <div class="field-wrap">
+            </div>
+            <button class="button button-block">Log In</button>
+          </form>
+          <h1>Log in to start pillaging!</h1>
+        </div>
         <div id="signup">   
           <h1>Sign up and create your Viking today!</h1>
           
@@ -35,17 +46,6 @@
               <input type="text" name="userNameValue"  required autocomplete="off"/>
             </div>
             <button id="vikingSubmitButton" type="submit" class="button button-block"/>Create Viking!</button>
-          </form>
-        </div>
-
-        <div id="login">
-          <h1>Welcome Back!</h1>
-          <form action="/" method="post">
-            <div class="field-wrap">
-              <label>Email Address<span class="req">*</span></label>
-              <input type="email" required autocomplete="off"/>
-          </div>
-          <button class="button button-block"/>Log In</button>
           </form>
         </div>
       </div>
