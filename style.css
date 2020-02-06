@@ -204,7 +204,8 @@ textarea {
 
 #menu {
     display: flex;
-    background-color: rgba(36, 41, 46);
+    background: rgba(26, 177, 136, 0.22);
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
     width: 55px;
     justify-content: top;
     align-items: center;
@@ -217,7 +218,7 @@ textarea {
 }
 
 #menu:hover {
-    background-color: rgb(36, 41, 46);
+    background-color: rgba(26, 177, 136, 0.12);
 }
 
 #menu .menu-item a {
