@@ -244,3 +244,8 @@ textarea {
   filter: invert(1);
   height: 37px;
 }
+
+#leaderboard{
+  display: flex;
+  justify-content: center;
+}
