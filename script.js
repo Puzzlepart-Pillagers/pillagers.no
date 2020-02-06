@@ -15,6 +15,18 @@
    `)
 })()
 
+async function loadAllUsers() {
+  let usersJSON = await fetch("http://api.pillagers.no/api/azure").then(res => res.json().then(users => users))
+  return usersJSON;
+}
+
+async function renderUserTable(id) {
+  let container = document.getElementById(id);
+  let users = await loadAllUsers()
+  if (!users) { return }
+}
+
+
 async function submitForm(event) {
   var formEmailValue = event.target.elements.emailValue.value;
   var formDisplayNameValue = event.target.elements.userNameValue.value;

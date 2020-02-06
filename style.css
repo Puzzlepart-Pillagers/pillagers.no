@@ -205,13 +205,15 @@ textarea {
 #menu {
     display: flex;
     background-color: rgba(36, 41, 46);
-    width: 100%;
-    justify-content: center;
+    width: 55px;
+    justify-content: top;
     align-items: center;
-    height: 50px;
+    height: 100%;
     transition: all .15s ease-out;
+    flex-direction: column;
     position: fixed;
     bottom: 0;
+    padding-top: 20px;
 }
 
 #menu:hover {
@@ -224,15 +226,20 @@ textarea {
     color: #f1f1f1;
     filter: invert(0);
     text-decoration: none;
-    padding: 0 10px;
+    padding: 5px;
     display: inline-flex;
 }
 
-#menu .menu-item a svg:hover {
+#menu .menu-item a:hover {
     filter: invert(1);
-    margin-top: 5px;
 }
 
 #menu .menu-item a svg {
-    filter: invert(.8);
+    filter: invert(1);
+}
+
+#menu .menu-item a img {
+  margin-top:3px;
+  filter: invert(1);
+  height: 37px;
 }
