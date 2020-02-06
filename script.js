@@ -21,7 +21,7 @@ async function loadAllUsers() {
   return usersJSON;
 }
 
-async function renderUserTable(id) {
+async function renderThrallTable(id) {
   let container = document.getElementById(id);
   if(container){console.log(`found container ${container}`)}
   let users = await loadAllUsers()

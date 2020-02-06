@@ -245,7 +245,7 @@ textarea {
   height: 37px;
 }
 
-#leaderboard{
+.leaderboard{
   display: flex;
   justify-content: center;
 }
