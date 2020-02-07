@@ -248,4 +248,15 @@ textarea {
 .leaderboard{
   display: flex;
   justify-content: center;
+  background: rgba(26, 177, 136, 0.22);
+  box-shadow: 0 4px 10px 10px rgba(19, 35, 47, 0.8);
+  border-top: 20px solid rgba(26, 177, 136, 0.8);
+  width: 50%;
+  margin:auto;
+  padding:20px;
+}
+.leaderboard th, .leaderboard td{
+padding:1% 2%;
+min-width: 100px;
+text-align: left;
 }
