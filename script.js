@@ -112,7 +112,7 @@ function createThrall() {
       "Dead": false,
       "FirstName": thrallFirstName,
       "LastName": thrallLastName,
-      "Level": "1",
+      "Level": 1,
       "Rank": "Thrall",
       "XP": Math.round(Math.random() * 10)
     }
@@ -138,6 +138,10 @@ async function populateKingOptions() {
     opt.innerText = `${king.FirstName["_"]} ${king.LastName["_"]}`
     select.appendChild(opt);
   });
+}
+
+async function renderProgressBar(container){
+  
 }
 
 async function submitForm(event) {
