@@ -22,8 +22,10 @@
           <select name="king" id="selectking">
           </select>
         </div>
-        <div class="field"><label for="vikingname">Viking Name</label><input type="text" id="vikingname" name="vikingname"><a style="font-size:14px;" href="#" onclick="populateVikingName()"> regenerate</a></div>
-        <div class="field"><input type="button" value="ENROLL!" class="button" onclick="createThrall()"></div>
+        <div class="field"><label for="vikingname">Viking Name</label><input type="text" id="vikingname"
+            name="vikingname"><a style="font-size:14px;" href="#" onclick="populateVikingName()"> regenerate</a></div>
+        <div class="field"><input type="button" value="ENROLL!" class="button"
+            onclick="createThrall()" onmouseup="renderProgressBar('#enroll',100)"></div>
       </form>
     </div>
   </div>
@@ -49,8 +51,8 @@
   </div>
   <script src="./script.js"></script>
   <script type="text/javascript">
-  populateKingOptions();
-  populateVikingName();
+    populateKingOptions();
+    populateVikingName();
   </script>
 
 </body>

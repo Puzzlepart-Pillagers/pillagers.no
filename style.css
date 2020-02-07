@@ -281,6 +281,10 @@ textarea {
   text-align: left;
 }
 
+#enroll{
+  flex-direction: column;
+}
+
 #enroll form{
   width:100%;
   height:100%;
@@ -306,4 +310,12 @@ textarea {
   font-size: 14px;
   align-items: center;
   margin-left: 10px;
+}
+
+#progress-outer{
+
+}
+#progress-inner{
+  padding: top 2px;
+  text-align: center;
 }
