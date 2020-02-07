@@ -15,19 +15,18 @@
    `)
 })()
 
-async function loadAllUsers() {
-  let usersJSON = await fetch("http://api.pillagers.no/api/azure").then(res => res.json().then(users => users))
-  console.log("got users, returning")
-  return usersJSON;
+async function getTable(tableName) {
+  return fetch(`http://api.pillagers.no/api/get/${tableName}`).then(res => res.json().then(users => users))
 }
 
 async function renderThrallTable(id) {
+  let users = await getTable("Units")
   let container = document.getElementById(id);
-  if(container){console.log(`found container ${container}`)}
-  let users = await loadAllUsers()
-  if (!users) { 
+  if (container) { console.log(`found container ${container}`) }
+  if (!users) {
     console.error("no users, sorry")
-    return }
+    return
+  }
   let tbl = document.createElement("table")
   let fields = [
     { key: "FirstName", value: "First name" },
@@ -52,6 +51,36 @@ async function renderThrallTable(id) {
     tbl.appendChild(tr)
     container.appendChild(tbl)
   });
+}
+
+async function renderKingTable(id) {
+  let kings = await getTable("Kings")
+  let container = document.getElementById(id)
+  let tbl = document.createElement("table")
+  let fields = [
+    { key: "FirstName", value: "First name" },
+    { key: "LastName", "value": "Last name" },
+    { key: "Penning", value: "Penning" },
+    { key: "XPGain", value: "XPGain" },
+    { key: "lat", value: "lat" },
+    { key: "lon", value: "lon" }]
+  fields.forEach(h => {
+    let th = document.createElement("th"); th.innerText = h.value
+    tbl.appendChild(th)
+  })
+  kings.forEach(u => {
+    let tr = document.createElement("tr")
+    fields.forEach(f => {
+      let td = document.createElement("td");
+      if (u[f.key]) {
+        td.innerText = u[f.key]["_"]
+      }
+      tr.appendChild(td)
+    })
+    tbl.appendChild(tr)
+    container.appendChild(tbl)
+  });
+
 }
 
 
