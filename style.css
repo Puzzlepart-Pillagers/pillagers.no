@@ -268,14 +268,15 @@ textarea {
   background: rgba(26, 177, 136, 0.22);
   box-shadow: 0 4px 10px 10px rgba(19, 35, 47, 0.8);
   border-top: 20px solid rgba(26, 177, 136, 0.8);
-  width: 50%;
+  color:#f1fafa;
+  width: 650px;
   margin: auto;
   padding: 20px;
 }
 
 .leaderboard th,
 .leaderboard td {
-  padding: 1% 2%;
+  padding-top:5px;
   min-width: 100px;
   text-align: left;
 }
@@ -286,18 +287,14 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-#enroll form button{
+#enroll form button, #enroll form input[type='button']{
   cursor:pointer;
 }
-#enroll form input{
-  /* width:50%; */
-}
+
 #enroll form label{
   position: static;
-  padding-right: 10px;
   min-width: 33%;
 }
-
 #enroll .field{
   margin:10px 0;
   display: flex;
@@ -308,5 +305,5 @@ textarea {
   display: flex;
   font-size: 14px;
   align-items: center;
-  margin: 0 8% 0 -16%;
+  margin-left: 10px;
 }

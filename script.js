@@ -101,12 +101,35 @@ function generateVikingName(type) {
   return name
 }
 
-function populateVikingName(){
-let el = document.getElementById("vikingname");
-el["value"] = generateVikingName()
+function createThrall() {
+  let form = $("form").serializeArray()
+  if (!form) { console.log("no form on page"); return }
+  let kingmail = form[0].value;
+  let thrallFirstName = form[1].value.split(" ")[0] || form[1].value
+  let thrallLastName = form[1].value.split(" ")[1] || `${form[1].value}sson`;
+  let thrallBody = JSON.stringify(
+    {
+      "Dead": false,
+      "FirstName": thrallFirstName,
+      "LastName": thrallLastName,
+      "Level": "1",
+      "Rank": "Thrall",
+      "XP": Math.round(Math.random() * 10)
+    }
+  )
+  let url = `https://pillagers-storage-functions.azurewebsites.net/api/CreateUnit?email=${kingmail}`
+  fetch(url, {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: thrallBody
+  }).then(d => d.text().then(f => f))
 }
 
-async function populateKingOptions(){
+function populateVikingName() {
+  let el = document.getElementById("vikingname");
+  el["value"] = generateVikingName()
+}
+
+async function populateKingOptions() {
   let kings = await getTable("Kings")
   let select = document.getElementById("selectking")
   kings.forEach(king => {
